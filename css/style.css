@@ -66,6 +66,9 @@ body{
 
   .header {
   }
+  .menu__mobile{
+    display: none;
+  }
   .menu {
     margin: 0;
     padding: 0;
@@ -103,7 +106,8 @@ body{
     font-weight: 400;
     letter-spacing: 0.02em;
     color: #1d1e1f;
-    margin: 207px auto 4px;
+    padding-top: 207px;
+    margin: 0px auto 4px;
   }
   .header__text {
     font-family: "Merriweather-LightItalic", serif;
@@ -121,7 +125,7 @@ body{
     line-height: 17px;
     font-weight: 400;
     letter-spacing: 0.04em;
-    color: #000000;
+    color: #000000;5
     text-decoration: none;
     width: 188px;
     height: 57px;
@@ -132,7 +136,6 @@ body{
     margin: 0 auto 206px;
   }
   
-
   .about {
     height: 1129px;
     background-color: #1d1d1d;
@@ -141,6 +144,7 @@ body{
     background: url(/img/buildings__dark.png) center 101% repeat-x,
                 url(/img/buildings__white.png) center 100% repeat-x,
                 #1d1d1d;
+    min-width: 1200px;
   }
   .about__inner {
     display: grid;
@@ -310,10 +314,221 @@ body{
     font-weight: 400px;
 
   }
-  .icon-heart{
 
+  /* ФОРМЫ*/
+
+  .contact {
   }
-  .icon-upload-cloud-outline{
+  .contact .block__head .block_title{
+    padding-top: 95px;
+  }
 
+  .contact__icon-box {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 570px;
+    margin: 0 auto;
+    padding-top: 64px;
+  }
+  .contact__item {
+    text-align: center;
+    width: 130px;
+  }
+  .contact__item i{
+    color: #323232;
+    font-size: 21px;
+  }
+  .icon-phone {
+  }
+  .contact__text{
+    margin-bottom: 12px;
+  }
+  .contact__text a{
+    font-family: "HelveticaNeueLTProLt", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #898888;
+    text-decoration: none;
+    transition: 0.3s
+  }
+  .contact__text a:hover{
+    color: #2a2a2a;
+    text-decoration: underline;
+  }
+  .icon-location {
+  }
+  .icon-mail {
+  }
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 770px;
+    margin: 0 auto;
+    padding-top: 153px;
+  }
+  .contact__form input{
+    padding: 22px;
+    height: 52px;
+    font-family: "HelveticaNeueLTProLt", sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #898888;
+    text-align: center;
+    border: 1px solid #999999;
+  }
+  .contact__name {
+    margin-bottom: 20px;
+  }
+  .contact__email {
+    margin-bottom: 20px;
+  }
+  .contact__number {
+    margin-bottom: 18px;
+  }
+  .contact__textarea {
+    padding: 22px;
+    margin-bottom: 21px;
+    height: 195px;
+    resize: none;
+    font-family: "HelveticaNeueLTProLt", sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #898888;
+    border: 1px solid #999999;
+  }
+  .contact__form .contact__button {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: #161616;
+    font-family: "HelveticaNeueLTProLt", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #fefefe;
+  }
+  footer{
+    padding-top: 154px;
+  }
+  .footer__text {
+    text-align: center;
+    font-family: "HelveticaNeueLTProLt", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #3b3b3b;
+    margin-bottom: 29px;
   }
   
+
+  /* MEDIA FOR IPAD*/
+
+  @media screen and (max-width: 769px){
+    .container{
+      width: 768px;
+    }
+    .about__inner{
+      grid-gap: 30px;
+      grid-template-columns: max-content;
+    }
+    .about {
+      height: auto;
+      padding-bottom: 200px;
+    }
+    .teem .block__title,
+    .provide .block__title{
+      padding-top: 100px;
+    }
+    .provide{
+      height: auto;
+      padding-bottom: 100px;
+    }
+    .provide__inner{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .provide__item{
+      max-width: 200px;
+      margin: 0 30px 40px;
+    }
+    .contact__form{
+      padding-top: 100px;
+    }
+    footer{
+      padding-top: 30px;
+    }
+  }
+
+  /*MEDIA FOR IPHONE*/
+  
+  @media screen and (max-width: 376px){
+    .container{
+      width: 375px;
+    }
+    .logo{
+      margin: 0 -15px;
+    }
+    .menu__desktop{
+      display: none;
+    }
+    .menu__mobile{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu{
+      display: none;
+    }
+    .menu__burger{
+      width: 30px;
+      height: 3px;
+      background-color: #121212;
+      position: relative;
+    }
+    .menu__burger:after{
+      content: '';
+      width: 30px;
+      height: 3px;
+      background-color: #121212;
+      position: absolute;
+      bottom: -10px;
+    }
+    .menu__burger:before{
+      content: '';
+      width: 30px;
+      height: 3px;
+      background-color: #121212;
+      position: absolute;
+      top: -10px;
+    }
+    .header__title{
+      padding-top: 100px;
+      margin-bottom: 30px;
+    }
+    .header__buttom{
+      margin-bottom: 100px;
+    }
+    .about__item{
+      max-width: 340px;
+    }
+    .team{
+      height: auto;
+    }
+    .team__inner{
+      flex-wrap: wrap;
+      margin-top: 90px;
+    }
+    .team__item{
+      width: 340px;
+      padding-bottom: 30px;
+    }
+    .provide{
+      padding-top: 100px;
+    }
+  }
